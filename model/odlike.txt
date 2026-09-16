@@ -1,0 +1,102 @@
+3128 rečenica, 406 članaka, SUBJ 42.4%
+konfiguracija: w13-tf-lower-stem + nb
+
+==========================================================================
+NAJJAČE ODLIKE  (12550 ukupno, hiperparametar {'clf__alpha': 0.1})
+==========================================================================
+ka OBJ                                  ka SUBJ
+  navod                         -3.317    naprednjačk                    3.362
+  požar                         -3.208    naprednjak                     3.143
+  rešenj                        -2.980    svak ko                        3.079
+  ratk                          -2.960    u stanj                        3.028
+  kilometr                      -2.908    lažn studentsk list            2.977
+  područj                       -2.907    lažn studentsk                 2.977
+  crkv                          -2.902    revolucij                      2.970
+  ratk mladić                   -2.879    student su                     2.944
+  rekl je                       -2.805    valjd                          2.923
+  kaza                          -2.792    umel                           2.907
+  ob                            -2.758    spremn da                      2.903
+  saradnj                       -2.753    laž                            2.887
+  24                            -2.704    pokaž                          2.873
+  zaposlen                      -2.703    sitn                           2.813
+  aktivn                        -2.697    nis umel                       2.806
+  oktobr                        -2.691    kokez                          2.804
+  navel                         -2.681    za njih                        2.802
+  napisa je                     -2.661    pošten                         2.801
+  navod da                      -2.660    kupuj                          2.801
+  predviđen                     -2.659    čovek koj                      2.772
+  21                            -2.643    kobr                           2.770
+  nave je                       -2.641    gledalc                        2.760
+  bolnic                        -2.634    pra                            2.750
+  korišćenj                     -2.631    razumel                        2.750
+  doda je                       -2.598    miting                         2.750
+  ukupn                         -2.563    smo mi                         2.746
+  odbor                         -2.562    tešk da                        2.737
+  rem                           -2.552    režimsk                        2.737
+  ulaz                          -2.552    sljedeć                        2.724
+  27                            -2.550    bagr                           2.722
+
+  Pitanje za izveštaj: da li su na SUBJ strani ocenjivačke reči
+  ili tematske imenice? Drugo bi značilo da model delom prepoznaje
+  temu, uprkos tome što je tema x oznaka na nivou korpusa V=0.116.
+
+==========================================================================
+PREDIKCIJE IZVAN SLOJA (grupisani slojevi po članku)
+==========================================================================
+  makro F1 izvan sloja: 0.709
+
+  matrica konfuzije (red = zlatno, kolona = predviđeno)
+               OBJ    SUBJ
+    OBJ       1398     403
+    SUBJ       479     848
+
+  -> oof_predictions.tsv
+
+==========================================================================
+PODSKUPOVI  (isti oblik kao u score_llm.py, radi poređenja)
+==========================================================================
+  žanr = kolumna                 n=1767  makro F1 0.643   F1 SUBJ 0.726
+  žanr = vest                    n=1361  makro F1 0.580   F1 SUBJ 0.282
+  tema = ekonomija               n= 161  makro F1 0.817   F1 SUBJ 0.765
+  tema = hronika                 n=  94  makro F1 0.728   F1 SUBJ 0.600
+  tema = kultura                 n= 353  makro F1 0.658   F1 SUBJ 0.523
+  tema = pol-drustvo             n=1997  makro F1 0.716   F1 SUBJ 0.684
+  tema = sport                   n= 118  makro F1 0.614   F1 SUBJ 0.571
+  tema = svet                    n= 405  makro F1 0.669   F1 SUBJ 0.603
+  izvor = blic                   n= 499  makro F1 0.685   F1 SUBJ 0.495
+  izvor = danas                  n= 502  makro F1 0.673   F1 SUBJ 0.688
+  izvor = n1info                 n= 680  makro F1 0.691   F1 SUBJ 0.702
+  izvor = politika               n= 520  makro F1 0.670   F1 SUBJ 0.606
+  izvor = rts                    n= 301  makro F1 0.705   F1 SUBJ 0.597
+  izvor = vreme                  n= 626  makro F1 0.730   F1 SUBJ 0.693
+  unutar navoda (P6, P13)        n= 281  makro F1 0.504   F1 SUBJ 0.218
+  pitanja (P9)                   n=  93  makro F1 0.586   F1 SUBJ 0.822
+  diskursni konektori (P8)       n=  91  makro F1 0.653   F1 SUBJ 0.699
+
+  prema saglasnosti anotatora:
+    puna saglasnost              n= 265  makro F1 0.789   F1 SUBJ 0.727
+    bilo sporno                  n=  85  makro F1 0.482   F1 SUBJ 0.488
+
+==========================================================================
+PRIMERI GREŠAKA (za ručnu analizu)
+==========================================================================
+
+  zlatno SUBJ, predviđeno OBJ  (479 rečenica)
+    [kol/poli] Za Pariz, ovo nije samo ekonomsko pitanje, već pitanje suvereniteta.
+    [kol/poli] I dok Francuska ruši birokratske barijere kako bi što pre zagrebala tlo u potrazi za
+    [kol/poli] Zemlja koja raspolaže jednim od najkvalitetnijih nalazišta litijuma u Evropi, jedina
+    [kol/poli] Glavni kočničari ovog procesa, popularno nazvani „blokaderi”, pod maskom ekologije s
+    [kol/poli] Razloge za toliku pažnju treba tražiti kako po mestu incidenta, tako i po značaju na
+    [kol/poli] Kao da zaboravljaju da je baš Vučić taj koji je na svega jedan odsto razlike priznao
+    [kol/poli] U takvom pristupu medijsko vlasništvo nije predmet analize, već samo povod za aktivi
+    [kol/poli] Osnovno u hrišćanstvu, da ljubimo bližnjeg svog, ne postoji, jer se kao glavna vredn
+
+  zlatno OBJ, predviđeno SUBJ  (403 rečenica)
+    [kol/poli] „S druge strane, vlasnik bilo koje organizacije – uključujući UO za privatne, i drža
+    [kol/poli] Početak tog puta vezuje se za titogradski omladinski medijski ambijent, za redakcije
+    [kol/poli] Omladinski pokret u Titogradu svakako nije bio disidentski kružok.
+    [kol/poli] Ustavni sudovi ih preuzimaju kao referentne standarde, zakonodavci kao orijentacione
+    [kol/poli] Tako se pred našim očima formira jedan suptilan, ali delotvoran mehanizam „meke” nor
+    [kol/poli] Drugim rečima, nije reč više o pitanju da li su mišljenja Venecijanske komisije obav
+    [kol/poli] No, tu se otvara i jedno daleko „neprijatnije” pitanje – pitanje legitimiteta.
+    [kol/poli] Zemlje koje prodaju naftu (poput članica OPEK-a) ostvaruju velike dolarske viškove,

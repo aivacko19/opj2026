@@ -1,0 +1,86 @@
+sentence_id	article_id	genre	topic	source	in_quote	text	label_Aleksa	nap_Aleksa	label_Anica	nap_Anica	label_Dimitrije	nap_Dimitrije	dogovoreno	pravilo
+bli-10273523353-005	10273523353	vest	pol-drustvo	blic		Poruke stvarno deluju kao da dolaze od JKP "Putevi Srbije"	SUBJ		SUBJ		OBJ			
+bli-14602151867-001	14602151867	vest	pol-drustvo	blic	Y	„Petković je ocenio da je Vidovdan trajno obeležio proces oblikovanja srpske nacionalne svesti, navodeći da Srbi ne bi preživeli brojna istorijska iskušenja da nije bilo tog praznika i ''vidovdanske etike''.“	OBJ		OBJ		SUBJ			
+bli-20798595648-014	20798595648	kolumna	pol-drustvo	blic		Čak i kada ne postoji potpuno slaganje, razgovor otvara mogućnost za kompromis.	OBJ		OBJ	mozda se neko ne slaze s ovim?	SUBJ			
+bli-36147663713-008	36147663713	vest	pol-drustvo	blic		Obično je to poslednji čin dugog niza nasilja, pretnji i nemoći.	SUBJ		SUBJ		OBJ			
+bli-50659446364-052	50659446364	kolumna	pol-drustvo	blic		Suze majke, žene i dece podstakle su ga da odvrati svoju vojsku ali je zbog toga ubijen.	OBJ		OBJ		SUBJ			
+bli-50940487061-008	50940487061	vest	pol-drustvo	blic		Situacija je još gora u PU Novi Sad 1, 2, i 3 u Bulevaru kralja Petra I, gde je prvi slobodan termin za zakazivanje za vađenje pasoša moguće naći od 12. avgusta.	OBJ		SUBJ		OBJ			
+bli-55144293120-004	55144293120	vest	pol-drustvo	blic		Jutros u 8.45h kako javljaju Srbi sa graničnog prelaza Evzoni, bilo je gužve, ali su turisti pretežno u ranim jutarnjim časovima bez muke prolazili najprometniji granični prelaz između Grčke i Severne Makedonije.	SUBJ	Koji 'Srbi'? Više deluje da je ocena autora	OBJ		OBJ			
+bli-69573754796-024	69573754796	kolumna	svet	blic		Nekada jedinstveni srpski narod Crne Gore, formalno se izjašnjavao kao nova nacija, ali su vremenom crnogorski i jugoslovenski identitet postali realnost, dok je srpstvo svedeno na folkor i jedno u Beogradu neverovatno, ali u Crnoj Gori fundamentalno, pitanje „hoće li nam izvanjci nešto određivati“.	OBJ		SUBJ		SUBJ			
+dan-127370657318-029	127370657318	kolumna	pol-drustvo	danas		Tako se u Srbiji pobeđuje i čuva vlast.	OBJ		SUBJ		SUBJ			
+dan-221656367654-018	221656367654	kolumna	pol-drustvo	danas	Y	„Bio bi to najbolji intervju koji je NDH1 ikada snimila.“	OBJ		OBJ		SUBJ			
+dan-223022264918-008	223022264918	kolumna	pol-drustvo	danas	Y	„Uostalom, kakvo je to ime za stranku, EPP?“	OBJ		SUBJ		SUBJ			
+dan-273156172461-011	273156172461	kolumna	pol-drustvo	danas		Takođe, gledaoci će moći da vide kako Miša Bačulov šeta Las Vegasom dva dana pre nego što je Kolumbo otkrio Ameriku.	OBJ	Smešno,ali objektivno	SUBJ		SUBJ			
+dan-342624403880-003	342624403880	kolumna	hronika	danas		Događa se ubistvo u kojem je učestvovalo više lica, ispaljeno je desetak hitaca, ko zna iz koliko komada oružja i kojih kalibara.	SUBJ		OBJ		OBJ			
+dan-353908777753-008	353908777753	kolumna	pol-drustvo	danas		Za uspeh ove komplikovane operacije bilo je dovoljno da se uhvati (vodene) puške i njome pripuca na kola.	OBJ		SUBJ		SUBJ			
+dan-359298452358-004	359298452358	kolumna	pol-drustvo	danas	Y	„Niko me nije slušao, išli su da se kupaju u Dubai, Marijanu sam lepo rekla drži se domaće stoke, šta si navalio, kamile pa kamile, a on ne sluša.“	OBJ		OBJ		SUBJ			
+dan-371249651231-043	371249651231	kolumna	pol-drustvo	danas		U tim slučajevima, reforma nije bila moguća.	OBJ		SUBJ	SUBJ jer mozda se neko ne bi slozio	SUBJ			
+dan-390414344818-024	390414344818	kolumna	pol-drustvo	danas		Zašto se onda lekari ne bune?	OBJ		SUBJ		SUBJ			
+dan-393301420124-013	393301420124	kolumna	pol-drustvo	danas		„U jebem ti…“, mumlam i teturam se do posude sa svetom vodicom, da se umijem.	SUBJ		SUBJ		OBJ			
+dan-451304427954-016	451304427954	vest	sport	danas		– Sigurno Sale (trener Obradović prim. aut.) zna zašto mu ne daje minute u Evroligi, iako se meni čini da to zaslužuje.	OBJ		SUBJ		SUBJ			
+dan-473030740077-034	473030740077	vest	pol-drustvo	danas		Vlasnica je diplome master hemičara, a studirala je, po navodima dela zaposlenih, 16 godina.	OBJ		OBJ		SUBJ			
+dan-524955297269-002	524955297269	vest	pol-drustvo	danas		Prilikom provere utvrđeno je da nemaju prijavljen boravak na teritoriji Srbije.	OBJ		OBJ		SUBJ			
+dan-755167115591-019	755167115591	kolumna	pol-drustvo	danas		Hteo sam još da opišem kako sam stresno u govoru „sa najvišeg mesta“ (nije Tito!) naučio sve o „pokrivalici“, a zaboravio sam potpuno da sam i posle radio montaže.	SUBJ		SUBJ		OBJ			
+dan-799233598578-019	799233598578	vest	svet	danas		Zato ostaje samo poseban tribunal za gonjenje Putinovog osnovnog zločina – planiranja, pripreme i izvršenja invazije, okupacije i pokušaja aneksije Ukrajine, koji datiraju još od invazije na Krim 2014. godine.	OBJ		SUBJ	osnovni zlocin?	SUBJ			
+dan-848007019343-023	848007019343	kolumna	ekonomija	danas		Ubrzo su „ljuti“ konkurenti shvatili da rat nije dobar ni za koga i da će mnogo da ih košta, pa su odlučili da zajedno nastupe na svoju i dobrobit Kraša.	OBJ		SUBJ		SUBJ			
+dan-918945551232-030	918945551232	kolumna	ekonomija	danas		Strani investitori kojima za njihove programe treba jeftina radna snaga otići će tamo gde je ima više.	OBJ		SUBJ		OBJ			
+dan-960880264478-011	960880264478	kolumna	sport	danas		Mladi Kostov će poput Andrije Maksimovića, Koste Nedeljkovića, Ognjena Mimovića, Alekse Damjanovića… „trbuhom za kruhom“.	OBJ		SUBJ		SUBJ			
+dan-997701263776-009	997701263776	kolumna	pol-drustvo	danas	Y	„Šarmiraću sve dame u predsedništvu.“	OBJ		OBJ		SUBJ			
+n1i-124956-004	124956	kolumna	pol-drustvo	n1info		„Na ovaj način blokaderi su pokazali da su spremni čak i da ubiju roditelje, jer politički ne misle kao oni.	OBJ		OBJ		SUBJ			
+n1i-148573-009	148573	kolumna	svet	n1info	Y	„Čak i kad je shvatila da sam u tom koračanju kroz svetovne i duhovne vrleti otišao u nekom drugom smeru, to nije poljuljalo njenu veru u mene.“	SUBJ		OBJ		OBJ			
+n1i-289896-000	289896	kolumna	pol-drustvo	n1info		Pavlović se plasirao u polufinale Ćacilenda kada je pre neki dan dobio desetku na ispitu!	OBJ		SUBJ		SUBJ			
+n1i-315167-018	315167	kolumna	svet	n1info	Y	„U dirljivo ironičnom raspletu, članak o manekenki Miji i njenoj agentici, na koju je kliknuo napaljeni Epstein, upravo je priča iz - Jutarnjeg lista.“	SUBJ		OBJ		SUBJ			
+n1i-328638-013	328638	kolumna	hronika	n1info		Čeda Jovanović je svojeveremeno pričao za medije da kada je te davne 2001. ušao u Vilu „Mir” da pregara sa Miloševićem, tamo je zatekao Sinišu Vučinića, pijanog, ispod nekog pulta.	OBJ	Zapravo se prenosi izjava	OBJ		SUBJ			
+n1i-330787-007	330787	kolumna	pol-drustvo	n1info		To im je bila taktika.	OBJ		SUBJ		SUBJ			
+n1i-362140-038	362140	kolumna	pol-drustvo	n1info		Zbog toga ljudi postaju zavisnisci.	OBJ		SUBJ		OBJ			
+n1i-378528-005	378528	vest	svet	n1info		On je rekao da nije iznaneđen takvih ponašanjem, jer se njihova politika nije promenila.	OBJ		OBJ		SUBJ			
+n1i-413363-021	413363	vest	pol-drustvo	n1info	Y	„Na vlasti u Prištini, makar zvanično, nisu uspeli da utiču ni iz međunarodne zajednice, pre svega Evropske unije.“	SUBJ		OBJ		OBJ			
+n1i-441823-052	441823	kolumna	svet	n1info		Poneli smo pare za deset života za svakoga od nas.	OBJ		SUBJ	utisak da smo poneli mnogo novca?	SUBJ			
+n1i-465919-024	465919	kolumna	sport	n1info		Možda je u BiH, možda nije nigde.	SUBJ		OBJ		SUBJ			
+n1i-501488-034	501488	kolumna	pol-drustvo	n1info	Y	„Vrhovni guru novog poretka nije ništa razumeo, jer i ne može da razume.“	SUBJ		OBJ		SUBJ			
+n1i-539601-006	539601	kolumna	pol-drustvo	n1info		Za razliku od Darvinovih beskičmenjaka, ovi ćacilendski bekičmenjaci nikada nisu postali kičmenjaci, jer su kičmenjaci živeli van Ćacilenda, i skupljali su se uglavnom na trgu Slavija, nedaleko odatle, ali i po celoj Srbiji, od Subotice do Novog Pazara.	OBJ		SUBJ		SUBJ			
+n1i-568445-000	568445	vest	pol-drustvo	n1info		"Na delu je permanentni državni udar koji sprovodi predsednik Republike.	OBJ		SUBJ		SUBJ			
+n1i-596877-002	596877	kolumna	pol-drustvo	n1info		Običaj u srpskom narodu je da u rano božićno jutro kolegijum Informera ode u šumu, u šumi nađe nekog četničkog vojvodu, i onda ga nose sve do studija.	OBJ	XD	SUBJ		SUBJ			
+n1i-814434-010	814434	kolumna	pol-drustvo	n1info		I taj odeljak bi se nalazio odmah pored odeljka “Leteći automobili”.	OBJ		SUBJ		SUBJ			
+n1i-884250-033	884250	kolumna	sport	n1info		Majstori su ostali u istoriji.	OBJ		SUBJ		SUBJ			
+n1i-968871-024	968871	kolumna	svet	n1info		Je li to poljsko cvijeće iz "Samo je ljubav tajna dvaju svjetova", "kao cvijet u polju/ medju bijelim brezama", ili grm divljih ruža iz "Dan dolazi", "kada divlje ruže procvjetaju"?	SUBJ		SUBJ		OBJ			
+n1i-976710-009	976710	kolumna	pol-drustvo	n1info	Y	„Go**ari odvratni!”, s tim što je prvi deo viknula u mikrofon, a drugi izgovorila kada je mikrofon isključila i udarila ga desnim krošeom.“	SUBJ		OBJ		SUBJ			
+pol-715941-002	715941	vest	pol-drustvo	politika		Nastavom pripremani za kakav posao u uznapredovaloj privredi.	SUBJ		OBJ		OBJ			
+pol-749395-019	749395	kolumna	pol-drustvo	politika		Profesor sam univerziteta, a i da to nisam – dovoljno sam imućan da do nekog srpskog sela na crnogorskoj obali dođem na nekoliko načina.	SUBJ		SUBJ		OBJ			
+pol-749400-032	749400	kolumna	pol-drustvo	politika	Y	„Za homo sapiense unutar univerziteta koji nemaju bedž brine se univerzitetska policija.“	SUBJ		OBJ		OBJ			
+pol-750838-008	750838	kolumna	pol-drustvo	politika		Povezan je s okolnim ulicama kroz šarmantne prolaze ispunjene prodavnicama, omiljeno je sastajalište građana, mesto uličnih svirača i čestih javnih promocija ili akcija udruženja građana.	OBJ		SUBJ		SUBJ			
+pol-754422-014	754422	kolumna	pol-drustvo	politika		U tom smislu standardna slika ustavnog prava kao zatvorenog sistema u kojem nacionalni ustavni sudovi imaju poslednju reč postepeno ustupa mesto jednoj mrežnoj strukturi u kojoj se argumenti, standardi i tumačenja kreću preko granica.	OBJ		OBJ	mozda neko moze da se ne slozi sa ovim?	SUBJ			
+pol-756889-010	756889	kolumna	pol-drustvo	politika		"Ove poražavajuće činjenice, nekadašnje pristalice zajedničke države uvaljene pre par godina u fotelje pokušavaju da relativizuju floskulama ""mi smo mali, kolonija, šaka jada, moramo""."	SUBJ		OBJ		SUBJ			
+pol-766974-027	766974	kolumna	pol-drustvo	politika		Podsetimo, „Zagrepčanin” (koji je zapravo pričao na lokalnoj ikavici) eksplicitno joj je rekao da je to rođeni brat poznatog pevača Marka Perkovića Tompsona koji peva ustaške pesme.	OBJ		OBJ		SUBJ			
+pol-768048-007	768048	kolumna	pol-drustvo	politika		Da ne zaboravimo ono glavno.	OBJ		OBJ		SUBJ			
+pol-772423-036	772423	kolumna	pol-drustvo	politika		U svetlu moderne psihologije i analize devijacija moći, ovo saznanje predstavlja ključnu kariku.	OBJ	Ključna karika je više stil nego ocena	SUBJ		SUBJ			
+pol-773024-012	773024	kolumna	pol-drustvo	politika		Nisam je poslušao, sav srećan mlatarao sam rukama i nogama – ponosan što sam proplivao i što me je Morava primila u svoj zagrljaj.	SUBJ		SUBJ		OBJ			
+pol-774087-012	774087	vest	pol-drustvo	politika		Njihova podozrivost išla je dotle da su redovno kontrolisali đule na kantaru, sumnjajući da je „prešlo” na stranu prodavca.	SUBJ		SUBJ		OBJ			
+pol-774327-018	774327	kolumna	hronika	politika		Ubrzo se saznalo da je Ilija Vincetić obukao uniformu ZNG-a, odmotavajući klupko porodične istorije u suprotnom smeru.	SUBJ		OBJ		OBJ			
+pol-774641-010	774641	vest	kultura	politika		Jedinstvenu vrednost knjige predstavlja autorovo promišljanje o Erosu stvaranja, koje se oslanja na filozofsku misao danskog mislioca Martinusa, prema kojoj senzualnost daleko prevazilazi usko shvaćenu seksualnost i obuhvata jedinstvo duhovnog, emotivnog i umetničkog iskustva.	OBJ		SUBJ		SUBJ			
+pol-779307-000	779307	vest	kultura	politika		Proslavljeni belgijski glumac i jedna od najvećih zvezda akcionog filma Žan-Klod van Dam uputio je video-poruku publici u Srbiji i najavio svoj dolazak u Niš 25. avgusta, povodom Međunarodnog filmskog festivala.	OBJ		OBJ		SUBJ			
+pol-783363-004	783363	vest	svet	politika	Y	„Niko ne sugeriše da će biti prisilnog raseljavanja.“	OBJ		OBJ		SUBJ			
+pol-783648-005	783648	vest	svet	politika		Konfederacija je poljska desničarska, nacionalistička i evroskeptična politička formacija.	OBJ		OBJ		SUBJ			
+pol-783692-004	783692	vest	pol-drustvo	politika		Poruka je izazvala brojne reakcije korisnika društvenih mreža, od kojih su pojedini ocenili da je upravo „bezuslovna podrška” bila jedna od najispraznijih parola blokaderskog pokreta.	OBJ	ipak je to ocena 'nekih'	OBJ		SUBJ			
+rts-5548870-010	5548870	kolumna	ekonomija	rts	Y	„Okružena sam veselom grupom, koja uglavnom zbija šale i smeje se.“	SUBJ		OBJ		OBJ			
+rts-5617257-033	5617257	kolumna	pol-drustvo	rts		Naravno, uz najavu drugoj strani, pa je sve po zakonu.	OBJ		SUBJ		SUBJ			
+rts-5888434-003	5888434	kolumna	svet	rts		Područja u kojima moj tim i ja pružamo humanitarnu pomoć spadaju među najteže pogođena, jer se nalaze blizu linije fronta koja se stalno menja.	OBJ	Daje se ocena, ali je odmah zatim potrkrepljena dokazom.	OBJ		SUBJ			
+rts-5918793-015	5918793	kolumna	sport	rts		Svlačionicu je dobro i na vreme pretresao, proluftirao i sve posložio na svoje mesto.	OBJ		SUBJ		SUBJ			
+rts-5922605-010	5922605	kolumna	ekonomija	rts		Kad su bili mali, nekima su čitali Pinokija da ih nauče da se mukotrpnim i nesebičnim procesom rada, učenja i odricanja i od drveta može napraviti čovek (može i košarkaš).	SUBJ		SUBJ		OBJ			
+rts-6006306-257	6006306	vest	kultura	rts		Od svog dolaska na svetsku scenu posle 1960. godine, rege je postao neverovatno popularan širom sveta.	SUBJ		OBJ		SUBJ			
+rts-6011305-011	6011305	vest	kultura	rts		Rođen u Argentini, sa španskim i italijanskim kao maternjim jezicima, Bertolino je u Jugoslaviju doneo osećaj za svet.	OBJ		SUBJ		SUBJ			
+rts-6030572-002	6030572	vest	sport	rts		Njegov dolazak je u potpunosti preporodio tim, koji je do Šumaherovog prvog naslova 2000. godine čekao na vozačku titulu više od dve decenije.	SUBJ		OBJ		SUBJ			
+vre-4922015-039	4922015	kolumna	kultura	vreme		Pozvao me je i poslužio odličnom travaricom.	SUBJ		OBJ		SUBJ			
+vre-4929355-016	4929355	kolumna	pol-drustvo	vreme		Sudska presuda maksimalno je izolirala predsjednika RS.	SUBJ		OBJ		SUBJ			
+vre-4929804-008	4929804	kolumna	pol-drustvo	vreme		Niko ih se više ne plaši, poručio je čovek sa predsedničkim mandatom, pa neka se ubuduće pripreme za obračune gde god da se pojave da ruše državu.	OBJ		OBJ		SUBJ			
+vre-4931176-024	4931176	kolumna	pol-drustvo	vreme		U to spada i registriranje uspona i proklizavanja kadrova iz podzemlja.	OBJ		SUBJ		SUBJ			
+vre-4932680-045	4932680	kolumna	kultura	vreme		Najlepši pop sa, doduše, jednim malim obrtom, suptilnom, začudnom stranputicom, koja ga je možda otela od mejnstrima i šire publike, ali i zauvek smestila u moje srce.	OBJ		SUBJ		SUBJ			
+vre-4934233-027	4934233	kolumna	kultura	vreme		Istvudov režiserski debi Play Misty For Me (1971, kod nas kratko u bioskopima pod naslovom Jeza u noći, triler za preporuku ljubiteljima E. A. Poa i pijaniste Erola Garnera i njegovog standarda “Misty”), sadrži i romantičnu ljubavnu sekvencu koja se u ono vreme smatrala slobodnijom.	OBJ		OBJ		SUBJ			
+vre-4948477-007	4948477	kolumna	kultura	vreme		Antić je poželeo da srpski narod živi dok je sveta i veka, kao i njegovi bliži i dalji susedi, dodavši da su ta dugovečnost i značaj nemogući bez knjige.	OBJ		OBJ		SUBJ			
+vre-4956785-002	4956785	kolumna	pol-drustvo	vreme		Njegov koncept je sljedeći: čim Republiku Srbiju polože na odar on će u svojoj ličnosti spojiti izvršnu, zakonodavnu i sudsku vlast.	OBJ		SUBJ		SUBJ			
+vre-4965741-003	4965741	kolumna	kultura	vreme		Zbog toga su ti crteži bukvalna ilustracija radnje, na primer ako glavni junaci romana u nekom momentu sednu na klupu da prijateljski proćaskaju, stranu sa tom scenom je crtež njih dvoje na klupi.	SUBJ		OBJ		OBJ			
+vre-4973237-053	4973237	kolumna	svet	vreme		Često mu njihov XXL bude mali.	SUBJ		OBJ		SUBJ			
+vre-4977044-019	4977044	kolumna	kultura	vreme		„Danas je ovaj izuzetni industrijski kompleks izložen kritičnom riziku.	OBJ		OBJ		SUBJ			
+vre-4981395-013	4981395	kolumna	pol-drustvo	vreme		Pa upravo je on vodio Komisiju za istraživanje ubistava novinara – Ćuruvije u Beogradu i Milana Pantića u Jagodini.	SUBJ		OBJ		OBJ			
+vre-4994908-021	4994908	vest	pol-drustvo	vreme		Iako je to kasnije u poređenju sa Srbijom, ovo je najraniji zabeleženi datum, ali i prvi put da je svet ušao u ekološki dug već tokom jula.	OBJ		OBJ		SUBJ			
+vre-5002936-033	5002936	kolumna	kultura	vreme		Kako priznati sopstvene gubitke, a ne pretvoriti ih u trajni politički program?	OBJ		SUBJ		SUBJ			

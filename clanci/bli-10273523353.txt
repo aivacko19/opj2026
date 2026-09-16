@@ -1,0 +1,19 @@
+Poslednjih dana sve veći broj građana prijavljuje sumnjive SMS poruke koje navodno stižu od Ministarstva saobraćaja, a u kojima se traži hitno plaćanje kazne za parkiranje. Poruke deluju uverljivo, sadrže broj predmeta i upozorenje o kašnjenju, ali iza svega se krije dobro osmišljena prevara.
+"Putevi Srbije" su još pre više od mesec dana alarmirali javnost i saopštili da građani dobijaju SMS poruke sa lažnim potpisom tog javnog preduzeća. Oni su tom prilikom naveli da se u porukama ukazuje na navodno prekoračenje brzine, nenaplaćene putarine ili druge saobraćajne prekršaje.
+- Ne otvarajte link i ne unosite podatke sa vaše platne kartice, jer je u pitanju zloupotreba - navedeno je bilo u saopštenju.
+Poruke stvarno deluju kao da dolaze od JKP "Putevi Srbije"
+Problem je što poruke izgledaju zvanično, koriste ime državnih institucija i prete ozbiljnim posledicama, ali je reč o dobro osmišljenoj internet prevari čiji je cilj krađa ličnih i bankarskih podataka.
+Kao što možete da vidite, na prvi pogled sve izgleda zvanično - pominje se "konačno poravnanje kazne", navodi se tačan datum i rok za uplatu, pa čak i status predmeta. Međutim, ključni detalj koji odaje prevaru jeste strani broj sa kog poruka stiže, kao i poziv da se klikne na nepoznat link i unesu lični podaci.
+Državne institucije ne šalju ovakve poruke putem SMS-a
+Stručnjaci upozoravaju da državne institucije u Srbiji ne šalju ovakve poruke putem SMS-a, niti traže plaćanje kazni preko sumnjivih linkova. Građani koji nasednu mogu ostati bez novca, ali i kompromitovati svoje bankovne podatke. Posebno zabrinjava to što prevaranti u porukama daju rok "do ponoći" i pretnju dodatnim troškovima kako bi naterali ljude da reaguju bez razmišljanja, a upravo to je najčešći trik u digitalnim prevarama.
+Ako dobijete ovakvu poruku, savet je jasan: ne klikćite na link, ne unosite podatke i ne odgovarajte na poruku. Umesto toga, proverite stanje eventualnih kazni isključivo preko zvaničnih sajtova ili lično u nadležnim institucijama.
+Ako ste ostavili podatke, odmah kontaktirajte banku
+Ukoliko ste već otvorili link ili ostavili podatke, preporučuje se da odmah kontaktirate banku i blokirate karticu, kao i da slučaj prijavite policiji. Nadležni apeluju na oprez jer se očekuje da će se ovakve prevare dodatno širiti i u narednom periodu.
+Važno je da znate da u nekim varijacijama prevare ide i korak dalje, odnosno ako jednom unesete podatke, mogu vas kasnije kontaktirati i pokušati dodatno da vas prevare.
+Kako da prepoznate odmah da je u pitanju internet prevara:
+- strani ili čudan broj
+- gramatičke greške ili čudan raspored reči
+- hitan rok ("odmah", "danas", "poslednje upozorenje")
+- link koji ne vodi na zvaničan domen (.gov.rs)
+- traženje podataka o kartici
+(Kurir)

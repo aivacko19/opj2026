@@ -1,0 +1,6 @@
+# Faza 3, track A — treba svima.
+# Verzije zameniti onima sa mašine na kojoj sve radi:
+#     pip freeze > requirements.txt
+scikit-learn==1.9.1
+numpy==2.5.3
+scipy==1.18.1

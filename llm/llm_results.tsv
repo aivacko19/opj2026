@@ -1,0 +1,5 @@
+config	model	n	macro	f_obj	f_subj	p_subj	r_subj	acc	pred_subj	fail	fail_rate
+chatgpt-en-few	gpt-4.1	3120	0.8260	0.8617	0.7903	0.8470	0.7407	0.8333	0.3708	0	0.0000
+chatgpt-en-zero	gpt-4.1	3120	0.8316	0.8649	0.7982	0.8466	0.7551	0.8381	0.3782	0	0.0000
+chatgpt-sr-few	gpt-4.1	3120	0.8137	0.8494	0.7780	0.8182	0.7415	0.8205	0.3843	0	0.0000
+chatgpt-sr-zero	gpt-4.1	3120	0.8222	0.8566	0.7878	0.8307	0.7491	0.8288	0.3824	0	0.0000

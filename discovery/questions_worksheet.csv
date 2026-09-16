@@ -1,0 +1,30 @@
+sentence_id	genre	text	ann_A	ann_B	ann_C	note_A	note_B	note_C					
+pol-752256-014	kolumna	Da li smo mi kao srpsko društvo spremni da prihvatimo te vrednosti?	SUBJ	SUBJ	subj	Te vrednosti’ are actually meant as a negative thing		"mogla bi biti i obj; zbog ""kao srpsko drustvo"" sam stavila subj"					Y
+pol-752256-015	kolumna	Da li smo spremni da kažemo da je sasvim u redu da se podrži neki politički kandidat za koga je bivša supruga javno tvrdila da je ispekao njihovog kućnog ljubimca u mikro-pećnici kako bi kaznio decu ili da je onanisao pred rođenom decom?	SUBJ	SUBJ	subj								Y
+pol-752256-018	kolumna	Naravno, to se nekako sve brzo zataška zbog različitih karijera, ali da li su to vrednosti koje mi želimo da prihvatimo?	SUBJ	SUBJ	subj								Y
+pol-752256-019	kolumna	Da li naše društvo, koje je ipak utemeljeno u pravoslavnom hrišćanstvu i svetosavlju, može to da prihvati?	SUBJ	OBJ	subj	Suggested an answer							
+pol-757014-057	kolumna	I, kome „patetični” Tramp ide na noge, s kojim potezima obavljenim pre toga, i usput uvali minimum 200 „boinga”?	SUBJ	SUBJ	subj								Y
+pol-770279-023	kolumna	Zašto kritičari Kejnsa smatraju da je pogrešno protumačio fundamentalne ekonomske principe?	OBJ	OBJ	obj								Y
+pol-768048-006	kolumna	Da, ali zašto ga je onda druga strana prihvatila?	OBJ	OBJ	subj								
+vre-4912915-007	kolumna	I tko to optužuje studente i pobunjeno društvo za nacizam?	OBJ	OBJ	obj	Might seem subjective but needs more context		bez sireg konteksta je obj					Y
+vre-4929355-013	kolumna	Ali kako je sve ovo previdio političar sa toliko iskustva poput Dodika, znajući da ni izdaleka ne raspolaže Vučićevim resursima?	OBJ	OBJ	subj								
+vre-4922837-013	kolumna	Gde se ne seti ranije nego baš na dan kada se obeležava ubistvo?	SUBJ	SUBJ	subj								Y
+vre-4918461-011	kolumna	Zašto nismo slušali studentkinju DUNP-a Eminu Spahić, koja je pre samo nedelju dana u Utisku nedelje rekla da Vidovdan za nju nema simboliku kakvu ima za većinski narod u Srbiji, ali da sada očekuje da ovaj datum dobije širu društvenu simboliku?	SUBJ	SUBJ	subj	a pathetic tone							Y
+vre-4918461-012	kolumna	Takođe, još veće pitanje jeste: da li mi zaista pričamo o dve nepomirljive ideologije?	SUBJ	OBJ	subj								
+vre-4918461-013	kolumna	Šta ako ova generacija predvodnika i predvodnica bunta ima novo čitanje naših starih podela, šta ako su ih pomirili, a mi nismo primetili?	SUBJ	SUBJ	subj	Šta ako’, suggesteted answer							Y
+vre-4930037-012	kolumna	Da nisu, zašto bi sad hitao da spašava narod od cena i pomogne mu da „pregura“ jesen?	SUBJ	SUBJ	subj								Y
+vre-4934883-014	kolumna	Šta će, utoliko, da razlikuje naredne izbore od svih ranijih?	OBJ	SUBJ	subj								
+vre-4981395-012	kolumna	Gdje se ovdje uklapa Veran Matiću?	OBJ	OBJ	obj								Y
+vre-4956785-004	kolumna	Kakav je upravljački kapacitet aktualnog šefa države i cijelog Ćacilenda?	SUBJ	SUBJ	obj	Seems objective but is actually comical and has word caciland							
+vre-4970392-012	kolumna	Što u toj eksploataciji ikome predstavljaju pojmovi demokracija, parlamentarizam, podjela vlasti, građanska prava?	SUBJ	SUBJ	subj								Y
+vre-4970392-013	kolumna	Jeste, policija ih tuče – a kad nije?	SUBJ	SUBJ	subj								Y
+vre-5003073-016	kolumna	Ima li išta jadnije i poganije?	SUBJ	SUBJ	subj								Y
+vre-5003073-017	kolumna	Da narodu bude jasno, vlast bi što prije trebalo da objasni da li opskurni likovi iz Informera imaju policijske značke, a policajci legitimacije Informera?	SUBJ	OBJ	subj								
+vre-4999756-016	kolumna	Nije baš nešto, zar ne?	SUBJ	SUBJ	subj								Y
+vre-5008262-020	kolumna	Da li Kričak može pobjednički dići ruke u ringu?	OBJ	SUBJ	obj	uses poetic language							
+vre-5008262-021	kolumna	Ili je započeo revanš za očuvanje rejtinga u sivoj zoni režima?	SUBJ	SUBJ	subj	again poetic but kinda critiacal							Y
+vre-5008262-022	kolumna	Može li se u tom kontekstu zamisliti da Milić iziđe sa svojim saznanjima o Kričkovim brutalnim postupcima protiv Nikoline Sinđelić i drugih studenata u garaži vlade Srbije prošlog ljeta?	SUBJ	SUBJ	subj	Rates someones behaviour as brutal							Y
+vre-5002936-032	kolumna	Ona postavlja pitanje koje je danas jednako važno: kako pomiriti istorijsko pamćenje sa političkom odgovornošću?	OBJ	OBJ	subj								
+vre-5002936-033	kolumna	Kako priznati sopstvene gubitke, a ne pretvoriti ih u trajni politički program?	OBJ	SUBJ	obj			?					
+vre-4998006-009	kolumna	Zašto onda vandalizovane govornice još ruže gradove?	SUBJ	OBJ	subj	Rates somethings as ugly							
+pol-776155-008	vest	Kada ćeš shvatiti da ne radiš NIŠTA?	SUBJ	SUBJ	subj								Y

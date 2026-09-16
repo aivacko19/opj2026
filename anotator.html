@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="sr" style="color-scheme:dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anotacija subjektivnosti</title>
+<style>
+  :root{
+    --ink:#dbe2ea; --ink-soft:#78848f; --rule:#2b333d;
+    --paper:#161c23; --ground:#11161c; --panel:#1b222a;
+    --mark:#2f4a63; --mark-edge:#4a7396; --mark-ink:#e8f2fb;
+    --obj:#2d7d9a; --subj:#c76a9c; --flag:#c99b3f; --on-accent:#0b0f14;
+    --measure:66ch;
+    --read:system-ui,"Cantarell","Segoe UI","Liberation Sans","DejaVu Sans",sans-serif;
+    --chrome:ui-monospace,"SF Mono","JetBrains Mono","DejaVu Sans Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font:15px/1.5 var(--read);
+    -webkit-font-smoothing:antialiased;
+    display:flex; flex-direction:column;
+  }
+  button{font:inherit; cursor:pointer}
+  :focus-visible{outline:2px solid var(--obj); outline-offset:2px}
+
+  /* ---------- header ---------- */
+  header{
+    display:flex; gap:18px; align-items:center; flex-wrap:wrap;
+    padding:10px 20px; background:var(--panel); border-bottom:1px solid var(--rule);
+  }
+  header h1{font-size:13px; font-weight:600; margin:0; letter-spacing:.02em; font-family:var(--chrome)}
+  .files{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+  .files label{font-size:11.5px; color:var(--ink-soft); display:flex; gap:5px; align-items:center; font-family:var(--chrome)}
+  .files input[type=file]{font-size:11px; width:150px; color:var(--ink-soft)}
+  #name{padding:4px 7px; border:1px solid var(--rule); border-radius:3px; width:110px; font:inherit; font-size:12.5px; background:var(--paper); color:var(--ink); font-family:var(--chrome)}
+  .spacer{flex:1}
+  .counts{font-size:12px; color:var(--ink-soft); font-variant-numeric:tabular-nums; font-family:var(--chrome)}
+  .counts b{color:var(--ink); font-weight:600}
+  .bar{height:3px; background:var(--rule); border-radius:2px; width:150px; overflow:hidden}
+  .bar i{display:block; height:100%; background:var(--ink); width:0}
+  .btn{padding:5px 11px; border:1px solid var(--rule); background:var(--paper); color:var(--ink); border-radius:3px; font-size:12.5px; font-family:var(--chrome)}
+  .btn:hover{border-color:var(--ink-soft)}
+
+  /* ---------- layout ---------- */
+  main{flex:1; display:grid; grid-template-columns:minmax(0,1fr) 300px; overflow:hidden}
+  .work{display:flex; flex-direction:column; overflow:hidden; padding:0 24px}
+  aside{border-left:1px solid var(--rule); background:var(--panel); overflow-y:auto; padding:16px 18px}
+
+  /* ---------- target sentence ---------- */
+  .meta{display:flex; gap:14px; font-size:11.5px; color:var(--ink-soft); padding:14px 0 0; flex-wrap:wrap; font-family:var(--chrome)}
+  .meta .q{color:var(--flag); font-weight:600}
+  .target{
+    font-family:var(--read);
+    font-size:21px; line-height:1.5; font-weight:500;
+    letter-spacing:-.005em; padding:14px 0 16px;
+    max-width:var(--measure);
+  }
+  .target em{font-style:normal; background:var(--mark); color:var(--mark-ink); box-shadow:0 0 0 2px var(--mark)}
+
+  .actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap; padding-bottom:12px}
+  .choice{
+    padding:9px 20px; border-radius:4px; border:1.5px solid var(--rule);
+    background:var(--paper); font-size:15px; font-weight:600; color:var(--ink);
+  }
+  .choice kbd{font:inherit; font-weight:400; color:var(--ink-soft); margin-left:7px}
+  .choice.obj:hover,.choice.obj.on{background:var(--obj); border-color:var(--obj); color:var(--on-accent)}
+  .choice.subj:hover,.choice.subj.on{background:var(--subj); border-color:var(--subj); color:var(--on-accent)}
+  .choice.obj.on kbd,.choice.subj.on kbd{color:rgba(11,15,20,.55)}
+  .toggle{padding:8px 13px; border-radius:4px; border:1.5px solid var(--rule); background:var(--paper); font-size:13px}
+  .toggle.on{background:var(--flag); border-color:var(--flag); color:var(--on-accent)}
+  #note{flex:1; min-width:180px; padding:8px 10px; border:1px solid var(--rule); border-radius:4px; font:inherit; font-size:12.5px; background:var(--paper); color:var(--ink); font-family:var(--chrome)}
+  #note::placeholder{color:var(--ink-soft)}
+
+  /* ---------- article context ---------- */
+  .ctxhead{
+    display:flex; align-items:center; gap:10px; font-size:11.5px; color:var(--ink-soft); font-family:var(--chrome);
+    border-top:1px solid var(--rule); padding-top:10px;
+  }
+  .ctxhead::after{content:""; flex:1; height:1px; background:var(--rule)}
+  .context{
+    flex:1; overflow-y:auto; background:var(--paper); border:1px solid var(--rule);
+    border-radius:4px; padding:20px 24px; margin:10px 0 18px;
+    font-family:var(--read);
+    font-size:14.5px; line-height:1.72; color:#aab6c2; max-width:var(--measure); white-space:pre-wrap;
+  }
+  .ctxbtn{padding:4px 10px; border:1px solid var(--rule); background:var(--paper);
+    color:var(--ink-soft); border-radius:3px; font-size:11.5px; font-family:var(--chrome)}
+  .ctxbtn:hover{color:var(--ink); border-color:var(--ink-soft)}
+  .ctxbtn.on{color:var(--ink); border-color:var(--ink-soft)}
+  .ctxbtn kbd{font:inherit; opacity:.55; margin-left:5px}
+  .context mark{background:var(--mark); color:var(--mark-ink); box-shadow:0 0 0 3px var(--mark), 0 1px 0 4px var(--mark-edge); border-radius:1px}
+
+  /* ---------- cheat sheet ---------- */
+  aside h2{font-size:11.5px; font-weight:600; margin:0 0 10px; color:var(--ink-soft); font-family:var(--chrome); letter-spacing:.03em}
+  .ask{background:var(--paper); border:1px solid var(--rule); border-radius:4px; padding:11px 13px; margin-bottom:16px; font-size:13px; line-height:1.5}
+  .ask p{margin:0 0 7px}
+  .ask p:last-child{margin:0}
+  .ask span{color:var(--ink-soft)}
+  table{width:100%; border-collapse:collapse; font-size:12.5px}
+  td{padding:5px 0; border-bottom:1px solid var(--rule); vertical-align:top; line-height:1.4}
+  td:last-child{text-align:right; white-space:nowrap; padding-left:8px; font-weight:600}
+  .t-obj{color:var(--obj)} .t-subj{color:var(--subj)} .t-no{color:var(--ink-soft); font-weight:400}
+  .remind{margin-top:14px; font-size:12.5px; line-height:1.5; color:var(--ink-soft)}
+  .keys{margin-top:16px; font-size:11.5px; color:var(--ink-soft); line-height:1.8; font-family:var(--chrome)}
+  .keys b{display:inline-block; min-width:52px; color:var(--ink); font-weight:600}
+
+  /* ---------- empty state ---------- */
+  .empty{padding:40px 0; max-width:var(--measure)}
+  .empty h2{font-size:20px; font-weight:600; margin:0 0 12px}
+  .empty p{color:var(--ink-soft); line-height:1.6; margin:0 0 10px}
+  .empty code{background:var(--panel); padding:1px 5px; border-radius:3px; font-size:12.5px; font-family:var(--chrome); color:var(--ink)}
+
+  @media (max-width:900px){
+    main{grid-template-columns:1fr; grid-template-rows:1fr auto}
+    aside{border-left:0; border-top:1px solid var(--rule)}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .bar i{transition:width .2s ease}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Anotacija subjektivnosti</h1>
+  <div class="files">
+    <label>rečenice <input type="file" id="fTsv" accept=".tsv,.txt"></label>
+    <label>kontekst <input type="file" id="fCtx" accept=".json"></label>
+    <label>izbor <input type="file" id="fIds" accept=".txt"></label>
+    <label>anotator <input id="name" placeholder="ime"></label>
+  </div>
+  <span class="spacer"></span>
+  <span class="counts" id="counts">—</span>
+  <span class="bar"><i id="bar"></i></span>
+  <button class="btn" id="bSave">Sačuvaj napredak</button>
+  <button class="btn" id="bExport">Izvezi TSV</button>
+</header>
+
+<main>
+  <section class="work">
+    <div id="empty" class="empty">
+      <h2>Učitaj fajl sa rečenicama da počneš</h2>
+      <p>Obavezno je samo polje <b>rečenice</b>: TSV sa kolonama <code>sentence_id</code>,
+         <code>text</code> i pratećim metapodacima.</p>
+      <p><b>kontekst</b> je <code>context.json</code> sa punim tekstovima članaka. Bez njega
+         se okolina sastavlja od susednih rečenica iz istog fajla, što je obično dovoljno.</p>
+      <p><b>izbor</b> je opciono: fajl sa po jednim <code>sentence_id</code> u redu. Ako ga
+         daš, anotiraju se samo te rečenice, tim redom. Tako se zadaje kalibracioni skup
+         ili tvoj deo glavne runde.</p>
+      <p><b>Članak je podrazumevano sakriven.</b> Rečenica se ocenjuje sama za sebe;
+         članak se otvara tasterom <code>C</code> samo kada rečenica bez njega nije
+         razumljiva, i sam se zatvara pri prelasku na sledeću.</p>
+      <p>Napredak se čuva u pregledaču posle svake oznake. Dugme <b>Sačuvaj napredak</b>
+         preuzima rezervnu kopiju koju možeš vratiti kroz polje <b>rečenice</b>.</p>
+    </div>
+
+    <div id="stage" hidden>
+      <div class="meta" id="meta"></div>
+      <div class="target" id="target"></div>
+      <div class="actions">
+        <button class="choice obj"  id="bObj">OBJ<kbd>1</kbd></button>
+        <button class="choice subj" id="bSubj">SUBJ<kbd>2</kbd></button>
+        <button class="toggle" id="bFlag">nedoumica<kbd style="margin-left:6px">D</kbd></button>
+        <input id="note" placeholder="napomena: šta je bilo teško">
+      </div>
+      <div class="ctxhead"><button class="ctxbtn" id="bCtx">pogledaj članak <kbd>C</kbd></button><span id="ctxlabel"></span></div>
+    </div>
+    <div class="context" id="context" hidden></div>
+  </section>
+
+  <aside>
+    <h2>Postupak &middot; uputstvo v1.2</h2>
+    <div class="ask">
+      <p><b>1.</b> Ko tvrdi ovo? <span>Autor, ili neko koga prenosi?</span></p>
+      <p><b>2.</b> Mogu li se dvoje ne složiti oko ovoga, a da niko ne greši u činjenicama?</p>
+    </div>
+
+    <h2>Pravila</h2>
+    <table>
+      <tr><td>Evaluativni epitet (<i>zavidan, sraman</i>)</td><td class="t-subj">SUBJ</td></tr>
+      <tr><td>Približnost i ograda (<i>skoro, verovatno, deluje, navodno</i>)</td><td class="t-obj">OBJ</td></tr>
+      <tr><td>Književan stil, nabrajanje, ritam</td><td class="t-obj">OBJ</td></tr>
+      <tr><td>Mišljenje u obliku obične tvrdnje</td><td class="t-subj">SUBJ</td></tr>
+      <tr><td>Pripisane namere i osećanja</td><td class="t-subj">SUBJ</td></tr>
+      <tr><td>Autorova sopstvena osećanja kao sadržaj</td><td class="t-obj">OBJ</td></tr>
+      <tr><td>Autorovo sećanje bez ocene</td><td class="t-obj">OBJ</td></tr>
+      <tr><td>Navod ili parafraza sa atribucijom</td><td class="t-obj">OBJ</td></tr>
+      <tr><td>Izmišljen navod bez govornika</td><td class="t-subj">SUBJ</td></tr>
+      <tr><td>Rečenica bez sopstvenog stava</td><td class="t-obj">OBJ</td></tr>
+      <tr><td><i>naravno, dakle, uostalom</i></td><td class="t-no">nije dokaz</td></tr>
+      <tr><td><i>nažalost, srećom</i></td><td class="t-subj">SUBJ</td></tr>
+      <tr><td>Poziv na delanje (<i>trebalo bi, mora se</i>)</td><td class="t-subj">SUBJ</td></tr>
+      <tr><td>Ironija, sarkazam</td><td class="t-subj">SUBJ</td></tr>
+      <tr><td>Nadimak, titula, poslovica</td><td class="t-obj">OBJ</td></tr>
+    </table>
+
+    <h2>Pitanja (P9)</h2>
+    <div class="ask" style="margin-top:0">
+      <p><b>Prvo</b> proveri ostala pravila — ako je rečenica subjektivna kao
+         tvrdnja, pitanje ništa ne menja.</p>
+      <p>Zatim: <span>može li se odgovor koji autor podrazumeva dati jednom rečju?</span></p>
+    </div>
+    <table>
+      <tr><td>Da (<i>Ne. Niko.</i>) — retoričko</td><td class="t-subj">SUBJ</td></tr>
+      <tr><td>Ne — pitanje ostaje otvoreno</td><td class="t-obj">OBJ</td></tr>
+    </table>
+
+    <p class="remind">Ocenjuje se rečenica sama za sebe, bez konteksta.
+       Kolumna sadrži i objektivne rečenice. Tema ne odlučuje. Tačnost ne
+       odlučuje. Tvoje slaganje sa autorom ne odlučuje.</p>
+
+    <div class="keys">
+      <b>1 / O</b> objektivna<br>
+      <b>2 / S</b> subjektivna<br>
+      <b>D</b> nedoumica<br>
+      <b>C</b> pogledaj članak<br>
+      <b>←</b> nazad<br>
+      <b>→</b> preskoči<br>
+      <b>Esc</b> izađi iz napomene
+    </div>
+  </aside>
+</main>
+
+<script>
+"use strict";
+const KEY = "anot-subj-v1";
+let rows = [], order = [], ctx = null, pos = 0, ann = {}, ctxOpen = false;
+
+/* ---------- storage (degrades to memory if unavailable) ---------- */
+const store = {
+  save(){ try{ localStorage.setItem(KEY, JSON.stringify({ann, name:nameEl.value})); }catch(e){} },
+  load(){ try{ return JSON.parse(localStorage.getItem(KEY)||"null"); }catch(e){ return null; } }
+};
+
+/* ---------- elements ---------- */
+const $ = id => document.getElementById(id);
+const nameEl=$("name"), stage=$("stage"), empty=$("empty"), ctxEl=$("context"),
+      metaEl=$("meta"), targetEl=$("target"), noteEl=$("note"),
+      bObj=$("bObj"), bSubj=$("bSubj"), bFlag=$("bFlag");
+
+/* ---------- parsing ---------- */
+function parseTSV(text){
+  const lines = text.replace(/\r/g,"").split("\n").filter(l=>l.length);
+  const head = lines[0].split("\t");
+  return lines.slice(1).map(l=>{
+    const c = l.split("\t"), o = {};
+    head.forEach((h,i)=> o[h] = c[i] ?? "");
+    return o;
+  });
+}
+const esc = s => s.replace(/[&<>]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[m]));
+
+/* ---------- context assembly ---------- */
+function neighbours(r){
+  const i = rows.indexOf(r), out = [];
+  for(let j=Math.max(0,i-7); j<Math.min(rows.length,i+8); j++){
+    if(rows[j].article_id === r.article_id) out.push(rows[j]);
+  }
+  return out;
+}
+function renderContext(r){
+  const raw  = r.text;
+  const ckey = r.sentence_id.slice(0,3) + "-" + r.article_id;   // spojeni korpus
+  const art  = ctx ? (ctx[ckey] ?? ctx[r.article_id]) : null;   // pojedinačni fajl
+  const lab  = $("ctxlabel");
+
+  if(!ctx){
+    lab.textContent = "kontekst nije učitan — izaberi context.json u zaglavlju";
+    ctxEl.innerHTML = ""; return;
+  }
+  if(!art){
+    lab.textContent = "članak nije nađen (traženi ključ: " + ckey + ")";
+    ctxEl.innerHTML = "<i>Proveri da context.json odgovara ovom korpusu.</i>";
+    return;
+  }
+  const at = art.indexOf(raw.slice(0, 40));
+  if(at >= 0){
+    lab.textContent = "ceo članak";
+    ctxEl.innerHTML = esc(art.slice(0, at)) + "<mark>" +
+                      esc(art.substr(at, raw.length)) + "</mark>" +
+                      esc(art.slice(at + raw.length));
+  } else {
+    lab.textContent = "ceo članak (rečenica nije pronađena u tekstu)";
+    ctxEl.innerHTML = esc(art);
+  }
+}
+function paintContext(){
+  const r = order[pos];
+  ctxEl.hidden = !ctxOpen;
+  $("bCtx").classList.toggle("on", ctxOpen);
+  $("bCtx").firstChild.nodeValue = ctxOpen ? "sakrij članak " : "pogledaj članak ";
+  $("ctxlabel").hidden = !ctxOpen;
+  if(!ctxOpen) return;
+  renderContext(r);
+  const m = ctxEl.querySelector("mark");
+  if(m) ctxEl.scrollTop = Math.max(0, m.offsetTop - ctxEl.clientHeight/2);
+}
+function toggleContext(){ ctxOpen = !ctxOpen; paintContext(); }
+
+/* ---------- rendering ---------- */
+function show(){
+  if(!order.length) return;
+  pos = Math.max(0, Math.min(pos, order.length-1));
+  const r = order[pos], a = ann[r.sentence_id] || {};
+
+  const bits = [r.sentence_id, r.source, r.genre, r.topic].filter(Boolean);
+  metaEl.innerHTML = bits.map(esc).join(" · ") +
+    (r.in_quote === "Y" ? ' <span class="q">u navodu</span>' : "") +
+    (r.text.trim().endsWith("?") ? ' <span class="q">pitanje</span>' : "");
+
+  targetEl.textContent = r.text_marked || r.text;
+  bObj.classList.toggle("on",  a.label === "OBJ");
+  bSubj.classList.toggle("on", a.label === "SUBJ");
+  bFlag.classList.toggle("on", !!a.flag);
+  noteEl.value = a.note || "";
+
+  paintContext();
+  stage.hidden = false; empty.hidden = true;
+  progress();
+}
+function progress(){
+  const done = order.filter(r=>ann[r.sentence_id]?.label).length;
+  const o = order.filter(r=>ann[r.sentence_id]?.label==="OBJ").length;
+  const s = order.filter(r=>ann[r.sentence_id]?.label==="SUBJ").length;
+  const f = order.filter(r=>ann[r.sentence_id]?.flag).length;
+  $("counts").innerHTML = `<b>${pos+1}</b>/${order.length} &nbsp; ` +
+    `označeno <b>${done}</b> &nbsp; OBJ ${o} &nbsp; SUBJ ${s} &nbsp; nedoumica ${f}`;
+  $("bar").style.width = (100*done/order.length) + "%";
+}
+
+/* ---------- actions ---------- */
+function setLabel(v){
+  ctxOpen = false;                       // deliberate act, re-closed each sentence
+  const r = order[pos];
+  ann[r.sentence_id] = Object.assign({}, ann[r.sentence_id], {label:v});
+  store.save();
+  if(pos < order.length-1){ pos++; show(); } else show();
+}
+function toggleFlag(){
+  const r = order[pos], a = ann[r.sentence_id] || {};
+  a.flag = !a.flag; ann[r.sentence_id] = a; store.save(); show();
+}
+noteEl.addEventListener("input", ()=>{
+  const r = order[pos], a = ann[r.sentence_id] || {};
+  a.note = noteEl.value; ann[r.sentence_id] = a; store.save();
+});
+noteEl.addEventListener("keydown", e=>{
+  if(e.key === "Escape" || e.key === "Enter"){ noteEl.blur(); e.preventDefault(); }
+});
+bObj.onclick  = ()=>setLabel("OBJ");
+bSubj.onclick = ()=>setLabel("SUBJ");
+bFlag.onclick = toggleFlag;
+$("bCtx").onclick = toggleContext;
+
+document.addEventListener("keydown", e=>{
+  if(e.target.tagName === "INPUT") return;
+  const k = e.key.toLowerCase();
+  if(k==="1"||k==="o"){ setLabel("OBJ");  e.preventDefault(); }
+  else if(k==="2"||k==="s"){ setLabel("SUBJ"); e.preventDefault(); }
+  else if(k==="d"){ toggleFlag(); e.preventDefault(); }
+  else if(e.key==="ArrowLeft"){ pos--; show(); e.preventDefault(); }
+  else if(e.key==="ArrowRight"){ pos++; show(); e.preventDefault(); }
+  else if(k==="c"){ toggleContext(); e.preventDefault(); }
+  else if(k==="n"){ noteEl.focus(); e.preventDefault(); }
+});
+
+/* ---------- files ---------- */
+function read(file, cb){ const fr = new FileReader(); fr.onload = ()=>cb(fr.result); fr.readAsText(file, "utf-8"); }
+
+$("fTsv").onchange = e => read(e.target.files[0], txt=>{
+  if(txt.trimStart().startsWith("{")){            // progress backup, not a corpus
+    const d = JSON.parse(txt);
+    ann = d.ann || {}; if(d.name) nameEl.value = d.name;
+    store.save(); progress(); return;
+  }
+  rows = parseTSV(txt);
+  if(!rows.length || !("sentence_id" in rows[0])){
+    alert("Fajl nema kolonu sentence_id."); return;
+  }
+  order = rows.slice(); pos = 0;
+  const saved = store.load();
+  if(saved){ ann = saved.ann || {}; if(saved.name && !nameEl.value) nameEl.value = saved.name; }
+  const firstUnlabelled = order.findIndex(r=>!ann[r.sentence_id]?.label);
+  if(firstUnlabelled > 0) pos = firstUnlabelled;
+  show();
+});
+
+$("fCtx").onchange = e => read(e.target.files[0], txt=>{ ctx = JSON.parse(txt); paintContext(); });
+
+$("fIds").onchange = e => read(e.target.files[0], txt=>{
+  const ids = txt.split(/\s+/).filter(Boolean);
+  const byId = Object.fromEntries(rows.map(r=>[r.sentence_id, r]));
+  order = ids.map(i=>byId[i]).filter(Boolean);
+  if(!order.length){ alert("Nijedan id iz izbora nije nađen u fajlu sa rečenicama."); order = rows.slice(); }
+  pos = 0; show();
+});
+
+/* ---------- output ---------- */
+function download(name, text, type){
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([text], {type}));
+  a.download = name; a.click(); URL.revokeObjectURL(a.href);
+}
+$("bSave").onclick = ()=> download("napredak-"+(nameEl.value||"anotator")+".json",
+  JSON.stringify({ann, name:nameEl.value}, null, 1), "application/json");
+
+$("bExport").onclick = ()=>{
+  if(!nameEl.value){ alert("Upiši ime u polje anotator pre izvoza."); nameEl.focus(); return; }
+  const miss = order.filter(r=>!ann[r.sentence_id]?.label).length;
+  if(miss && !confirm(miss+" rečenica još nije označeno. Izvezi ipak?")) return;
+  const esc2 = s => (s||"").replace(/[\t\n\r]/g," ");
+  const out = ["sentence_id\tlabel\tnedoumica\tnapomena\tannotator"];
+  order.forEach(r=>{
+    const a = ann[r.sentence_id] || {};
+    out.push([r.sentence_id, a.label||"", a.flag?"Y":"", esc2(a.note), nameEl.value].join("\t"));
+  });
+  download("anotacija-"+nameEl.value+".tsv", out.join("\n")+"\n", "text/tab-separated-values");
+};
+
+nameEl.oninput = store.save;
+addEventListener("beforeunload", e=>{
+  if(Object.keys(ann).length){ e.preventDefault(); e.returnValue = ""; }
+});
+(function(){ const s = store.load(); if(s){ ann = s.ann||{}; if(s.name) nameEl.value = s.name; } })();
+</script>
+</body>
+</html>
